@@ -18,7 +18,7 @@ MyProfile() {
   }
 
   var logo =
-      'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/asbishen.jpeg';
+      'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/my_profile/Images/logo.jpeg';
   var myhome = Scaffold(
     appBar: AppBar(
       title: Text('My Profile'),
@@ -88,7 +88,7 @@ var mybody = Container(
             ),
             image: DecorationImage(
               image: NetworkImage(
-                  'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/ayush.jpg'),
+                  'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/my_profile/Images/ayush.jpg'),
             ),
           ),
         ),
