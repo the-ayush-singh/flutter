@@ -6,18 +6,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 MyProfile() {
   StatusBar.color(Colors.grey);
 
-  mytoast() {
-    Fluttertoast.showToast(
-      msg: 'Click mat kar be !!!',
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.CENTER,
-      timeInSecForIosWeb: 1,
-      backgroundColor: Colors.red,
-      textColor: Colors.white,
-      fontSize: 16,
-    );
-  }
-
   var logo =
       'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/my_profile/Images/logo.jpeg';
   var myhome = Scaffold(
@@ -25,7 +13,7 @@ MyProfile() {
       title: Text('My Profile'),
       leading: Image.network(logo),
       actions: <Widget>[
-        IconButton(icon: Icon(Icons.call), onPressed: notifications),
+        IconButton(icon: Icon(Icons.call), onPressed: mytoast),
       ],
     ),
     body: mybody,
