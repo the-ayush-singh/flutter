@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:my_profile/home3.dart';
 import 'package:statusbar/statusbar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -24,7 +25,7 @@ MyProfile() {
       title: Text('My Profile'),
       leading: Image.network(logo),
       actions: <Widget>[
-        IconButton(icon: Icon(Icons.call), onPressed: mytoast()),
+        IconButton(icon: Icon(Icons.call), onPressed: notifications),
       ],
     ),
     body: mybody,
@@ -105,7 +106,7 @@ mytoast() {
   Fluttertoast.showToast(
     msg: 'Click mat kar be !!!',
     toastLength: Toast.LENGTH_SHORT,
-    gravity: ToastGravity.BOTTOM,
+    gravity: ToastGravity.BOTTOM_LEFT,
     timeInSecForIosWeb: 1,
     backgroundColor: Colors.red,
     textColor: Colors.white,
