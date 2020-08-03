@@ -100,4 +100,5 @@ final audio = Audio(
   ),
 );
 
-final online = Audio.network('');
+final online = Audio.network(
+    'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/task1/assets/Namo.mp3');
