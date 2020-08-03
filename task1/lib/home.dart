@@ -43,7 +43,7 @@ var mybody = Container(
           IconButton(
             icon: Icon(Icons.play_arrow),
             onPressed: () {
-              assetsAudioPlayer.open(audio, showNotification: true);
+              assetsAudioPlayer.open(online, showNotification: true);
             },
           ),
           IconButton(
@@ -70,7 +70,7 @@ var mybody = Container(
           IconButton(
             icon: Icon(Icons.play_arrow),
             onPressed: () {
-              assetsAudioPlayer.open(online);
+              assetsAudioPlayer.open(audio, showNotification: true);
             },
           ),
           IconButton(
@@ -91,7 +91,17 @@ var logo =
 final assetsAudioPlayer = AssetsAudioPlayer();
 
 final audio = Audio(
-  'assets/Namo.mp3',
+  'assets/Khairiyat.mp3',
+  metas: Metas(
+    title: 'khairiyat',
+    artist: "Amit Trivedi",
+    album: "SSR's Film Songs",
+    image: MetasImage.network(''),
+  ),
+);
+
+final online = Audio.network(
+  'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/task1/assets/Namo.mp3',
   metas: Metas(
     title: 'Namo Namo',
     artist: "Amit Trivedi",
@@ -99,6 +109,3 @@ final audio = Audio(
     image: MetasImage.asset('assets/index.jpeg'),
   ),
 );
-
-final online = Audio.network(
-    'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/task1/assets/Namo.mp3');
