@@ -42,13 +42,13 @@ var mybody = Container(
           IconButton(
             icon: Icon(Icons.play_arrow),
             onPressed: () {
-              assetsAudioPlayer.open(Audio('assets/Namo.mp3'));
+              assetsAudioPlayer.open(audio, showNotification: true);
             },
           ),
           IconButton(
             icon: Icon(Icons.pause),
             onPressed: () {
-              assetsAudioPlayer.pause();
+              assetsAudioPlayer.playOrPause();
             },
           ),
         ],
@@ -61,3 +61,12 @@ var mybody = Container(
 var logo =
     'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/my_profile/Images/logo.jpeg';
 final assetsAudioPlayer = AssetsAudioPlayer();
+final audio = Audio(
+  'assets/Namo.mp3',
+  metas: Metas(
+    title: 'Namo Namo',
+    artist: "Amit Trivedi",
+    album: "SSR's Film Songs",
+    image: MetasImage.asset('assets/index.jpeg'),
+  ),
+);
