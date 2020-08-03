@@ -25,6 +25,10 @@ class _VideoAppState extends State<VideoApp> {
     return MaterialApp(
       title: 'Video Demo',
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Video App by Ayush Singh'),
+          leading: Image.network(logo),
+        ),
         body: Center(
           child: _controller.value.initialized
               ? AspectRatio(
