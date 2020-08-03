@@ -94,9 +94,10 @@ final audio = Audio(
   'assets/Khairiyat.mp3',
   metas: Metas(
     title: 'khairiyat',
-    artist: "Amit Trivedi",
+    artist: "Arijit Singh",
     album: "SSR's Film Songs",
-    image: MetasImage.network(''),
+    image: MetasImage.network(
+        'https://a10.gaanacdn.com/images/albums/58/2772458/crop_175x175_1567516167_2772458.jpg'),
   ),
 );
 
