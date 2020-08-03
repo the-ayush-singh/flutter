@@ -11,11 +11,8 @@ MyAssetApp() {
 
 var myhome = Scaffold(
   appBar: AppBar(
-    title: Text('Testing Local Assets'),
+    title: Text('Task-1 - By Ayush Singh'),
     leading: Image.network(logo),
-    actions: <Widget>[
-      Icon(Icons.folder_open),
-    ],
   ),
   body: mybody,
 );
@@ -27,7 +24,15 @@ var mybody = Container(
 
     // crossAxisAlignment: CrossAxisAlignment.end,
     children: <Widget>[
-      Text('Namo Namo song from  Kedarnath - From Assets'),
+      Container(
+        height: 50,
+        width: 150,
+        child: Text(
+          'In the memory of SSR',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ),
+      Text('Namo Namo song from  Kedarnath - From Network'),
       Container(
         height: 200,
         width: 200,
@@ -54,13 +59,14 @@ var mybody = Container(
           ),
         ],
       ),
-      Text('Khariyat song from Chhichhore - From Network'),
+      Text('Khariyat song from Chhichhore - From Assets'),
       Container(
         height: 200,
         width: 200,
         child: Card(
             // color: Colors.red,
-            child: Image.asset('assets/index.jpeg'),
+            child: Image.network(
+                'https://a10.gaanacdn.com/images/albums/58/2772458/crop_175x175_1567516167_2772458.jpg'),
             elevation: 8 //It increases the shadow of the card.
             ),
       ),
