@@ -27,6 +27,7 @@ var mybody = Container(
 
     // crossAxisAlignment: CrossAxisAlignment.end,
     children: <Widget>[
+      Text('Namo Namo song from  Kedarnath - From Assets'),
       Container(
         height: 200,
         width: 200,
@@ -53,6 +54,33 @@ var mybody = Container(
           ),
         ],
       ),
+      Text('Khariyat song from Chhichhore - From Network'),
+      Container(
+        height: 200,
+        width: 200,
+        child: Card(
+            // color: Colors.red,
+            child: Image.asset('assets/index.jpeg'),
+            elevation: 8 //It increases the shadow of the card.
+            ),
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.play_arrow),
+            onPressed: () {
+              assetsAudioPlayer.open(online);
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.pause),
+            onPressed: () {
+              assetsAudioPlayer.playOrPause();
+            },
+          ),
+        ],
+      ),
     ],
   ),
 );
@@ -61,6 +89,7 @@ var mybody = Container(
 var logo =
     'https://raw.githubusercontent.com/the-ayush-singh/flutter/master/my_profile/Images/logo.jpeg';
 final assetsAudioPlayer = AssetsAudioPlayer();
+
 final audio = Audio(
   'assets/Namo.mp3',
   metas: Metas(
@@ -70,3 +99,5 @@ final audio = Audio(
     image: MetasImage.asset('assets/index.jpeg'),
   ),
 );
+
+final online = Audio.network('');
