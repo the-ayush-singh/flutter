@@ -1,16 +1,14 @@
 # task1
 
-A new Flutter project.
+It is an Audio and Video Player Mobile App.
 
-## Getting Started
+You can find code of Audio Player in - 
+## lib/home.dart
+![Image of Music App](https://raw.githubusercontent.com/the-ayush-singh/flutter/master/task1/assets/musicapp2.jpeg)
 
-This project is a starting point for a Flutter application.
+![Image of the Music App](https://raw.githubusercontent.com/the-ayush-singh/flutter/master/task1/assets/musicapp.jpeg)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+You can find code of Video Player in - 
+## lib/video.dart
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
