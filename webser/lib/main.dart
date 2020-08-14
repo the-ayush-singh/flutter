@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MyWebServerApp());
+}
+
+mydata() async {
+  var url = 'http://192.168.18.13/cgi-bin/date.py';
+  var r = await http.get(url);
+  print(r.body);
+}
+
+mydata1() async {
+  var url = 'http://192.168.18.13/cgi-bin/cal.py';
+  var r = await http.get(url);
+  print(r.body);
 }
 
 String xx;
@@ -40,12 +53,22 @@ class MyWebServerApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Card(
-                  child: FlatButton(
-                    onPressed: () {
-                      print(xx);
-                    },
-                    child: Text('Submit'),
+                Center(
+                  child: Row(
+                    children: [
+                      Card(
+                        child: FlatButton(
+                          onPressed: mydata,
+                          child: Text('Date'),
+                        ),
+                      ),
+                      Card(
+                        child: FlatButton(
+                          onPressed: mydata1,
+                          child: Text('Cal'),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
