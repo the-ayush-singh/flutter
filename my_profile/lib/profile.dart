@@ -51,7 +51,7 @@ var mybody = Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Ayush Singh'),
+            Text('Ayush Singh chor'),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
